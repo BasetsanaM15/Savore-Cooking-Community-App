@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="CookingCommunityApp.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>Savore Cooking Community</title>
+    <link href="<%= ResolveUrl("~/Content/Site.css") %>" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <form runat="server">
+        <div class="header">
+            <h1>Savore Cooking Community</h1>
+            <asp:LoginView runat="server">
+                <LoggedInTemplate>
+                    <nav>
+                        <ul class="nav-list">
+                            <li><asp:HyperLink runat="server" NavigateUrl="~/Pages/SubmitRecipe.aspx">Submit Recipe</asp:HyperLink></li>
+                            <li><asp:HyperLink runat="server" NavigateUrl="~/Pages/ViewRecipes.aspx">View Recipes</asp:HyperLink></li>
+                            <li><asp:HyperLink runat="server" NavigateUrl="~/Pages/MyRecipes.aspx">My Recipes</asp:HyperLink></li>
+                            <li><asp:LoginStatus ID="LoginStatus1" runat="server" LogoutPageUrl="~/Pages/Login.aspx" LogoutText="Logout" /></li>
+                        </ul>
+                    </nav>
+                </LoggedInTemplate>
+
+            </asp:LoginView>
+        </div>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        <div class="footer">
+            <p>&copy; 2025 Savore Cooking Community</p>
+        </div>
+    </form>
+</body>
+</html>
