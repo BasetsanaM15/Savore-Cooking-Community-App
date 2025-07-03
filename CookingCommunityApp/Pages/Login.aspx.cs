@@ -21,7 +21,7 @@ namespace CookingCommunityApp.Pages
                 try
                 {
                     conn.Open();
-                    object result = cmd.ExecuteScalar();
+                    object result = cmd.ExecuteScalar(); 
 
                     if (result != null)
                     {
