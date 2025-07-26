@@ -1,100 +1,42 @@
-Savore – Cooking Community App 
+# Savore Community Cooking App
 
-Module: Advanced C# Programming
+## Project Overview
+**Savore** is a distributed web application designed for the Online Cooking Community. It enables users to submit, view, and rate recipes on a scale from 1 to 5. Built with ASP.NET using C#, this project demonstrates key skills in advanced C# programming, secure user authentication, database connectivity, and web service integration.
 
-Institution: Eduvos (Pty) Ltd
+> This project was completed for the **Advanced C# Programming** module at Eduvos, under the module code **ITHCA0 / ITACA0**.
 
-Developer: Basetsana Mabusela
+---
 
-Lecturer: Charles Mukwevho 
+## Features
 
-Overview:
+- **User Registration & Authentication**
+  - Secure registration with personal details
+  - Login and logout functionality
+  - Forgot password recovery using a security question
+  - Password change functionality
 
-Savore is a distributed ASP.NET web application built as part of the Advanced C# Programming module at Eduvos. It is designed for an online cooking community where registered users can share, view, and rate recipes.
-The system supports user authentication, secure password management, personal recipe dashboards, and recipe rating functionality. It includes a Web Service layer for database interaction and logs each rating submitted.
+- **Recipe Management**
+  - Submit new recipes with name, ingredients, and method
+  - View all recipes with average and total rating info
+  - Users can only view and manage their own posted recipes
 
-Features:
+- **Rating System**
+  - Rate other users' recipes from 1 to 5
+  - View average rating of each recipe
+  - Ratings are final once submitted
 
-User Registration & Login-
-Secure registration using email, password, and personal details. Login and password recovery via security question included.
+- **User Profile**
+  - View and update personal information
 
-Personal Profile Management-
-Users can update their personal information and change their passwords at any time.
+- **Security & Access**
+  - Non-logged-in users are redirected to the login page if accessing restricted pages
+  - Secure session management and logout
+    
 
-Recipe Management-
-Submit new recipes with name, ingredients, and method, 
-View detailed recipe information including average rating, 
-View a personal dashboard with submitted recipes and their rating summaries.
+## Technologies Used
 
-Rating System-
-Logged-in users can rate other users’ recipes (1 to 5).
-Ratings cannot be changed once submitted.
+- **Frontend & Backend**: ASP.NET Web Forms (C#)
+- **Database**: Microsoft SQL Server or MS Access
+- **Web Service**: ASP.NET Web Service
 
-Access Control-
-Unauthenticated users are redirected to the login page if trying to access protected areas.
-
-Log Out Functionality-
-Users can securely end their session via the logout feature.
-
-Technologies Used:
-
-Front-End & Back-End: ASP.NET Web Forms (C#)
-
-Web Service: ASP.NET Web Service (ASMX)
-
-Database: SQL Server (alternatively compatible with MS Access)
-
-Logging: Text file log for rating submissions
-
-Database Structure:
-
-
-Users Table – Stores user information including email, password, and security question/answer.
-
-Recipes Table – Stores recipe details: name, ingredients, method, owner ID.
-
-Ratings Table – Stores rating records: recipe ID, user ID, rating value.
-
-How It Works:
-
-
-User registers → email and password are stored securely.
-
-User logs in → gains access to view, post, and rate recipes.
-
-Recipe ratings → submitted through the Web Service and stored in the database.
-
-Ratings are logged in a .txt file with user email, recipe name, and rating value.
-
-Recipe owners can view all their recipes with average and total ratings.
-
-File Structure (Main Folders):
-
-
-/Savore-Cooking-Community-App
-├── /App_Code
-├── /App_Data
-├── /WebService
-│   └── RecipeService.asmx
-├── /Pages
-│   ├── Register.aspx
-│   ├── Login.aspx
-│   ├── ViewRecipes.aspx
-│   ├── SubmitRecipe.aspx
-│   ├── RateRecipe.aspx
-│   └── Profile.aspx
-├── /Logs
-│   └── ratings.txt
-├── Web.config
-└── README.md
-
-Academic Integrity Notice
-
-
-This project was developed as an academic submission for Eduvos and follows all plagiarism and referencing policies. All work is original and complies with academic honesty standards.
-
-Contact
-
-
-For questions or feedback regarding this project, please contact me on GitHub or via email.
 
